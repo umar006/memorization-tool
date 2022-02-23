@@ -10,17 +10,17 @@ It would be great to remember anything at any time. Alas, our mental capacity is
 ## Installation
 
 ```bash
-$ pip install requirement.txt
+$ pip install requirements.txt
 ```
 
 ## Run
 
-TBA
-
-## Usage
-
-TBA
+```bash
+$ python main.py
+```
 
 ## Test
 
-TBA
+```bash
+$ python test.py
+```
