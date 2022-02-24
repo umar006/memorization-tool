@@ -21,6 +21,14 @@ class TestFlashCard(unittest.TestCase):
         fc.add_flash_card('question', 'answer')
         self.assertEqual(len(fc.flash_cards), 1)
 
+    def test_key_value_flash_card(self):
+        """
+        Flash card 'A' should has answer 'B'
+        """
+        fc = FlashCard()
+        fc.add_flash_card('A', 'B')
+        self.assertEqual(fc.flash_cards.get('A'), 'B')
+
 
 if __name__ == "__main__":
     unittest.main()
