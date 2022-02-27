@@ -1,11 +1,14 @@
 from typing import Tuple
+from abc import ABC, abstractmethod
 
 
-class FlashCard:
+class Menu(ABC):
+    @abstractmethod
+    def main_menu():
+        ...
 
-    def __init__(self) -> None:
-        self.flash_cards = {}
 
+class FlashCardMenu(Menu):
     def main_menu(self) -> None:
         print("1. Add flashcards")
         print("2. Practice flashcards")
@@ -14,6 +17,13 @@ class FlashCard:
     def add_flash_card_menu(self) -> None:
         print("\n1. Add a new flashcard")
         print("2. Exit")
+
+
+class FlashCard:
+
+    def __init__(self) -> None:
+        self.menu = FlashCardMenu()
+        self.flash_cards = {}
 
     def add_flash_card_field(self) -> Tuple[str, str]:
         question: str = ""

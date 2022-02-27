@@ -3,12 +3,12 @@ from flash_card import FlashCard
 if __name__ == "__main__":
     fc = FlashCard()
     while True:
-        fc.main_menu()
+        fc.menu.main_menu()
 
         user_input = input()
         if user_input == '1':
             while True:
-                fc.add_flash_card_menu()
+                fc.menu.add_flash_card_menu()
                 user_input = input()
                 if user_input == '1':
                     question, answer = fc.add_flash_card_field()
