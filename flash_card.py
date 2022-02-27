@@ -16,10 +16,15 @@ class FlashCard:
         print("2. Exit")
 
     def add_flash_card_field(self) -> Tuple[str, str]:
-        print("\nQuestion:")
-        question = input()
-        print("Answer:")
-        answer = input()
+        question: str = ""
+        answer: str = ""
+
+        while len(question) < 1:
+            print("\nQuestion:")
+            question = input().strip()
+        while len(answer) < 1:
+            print("Answer:")
+            answer = input().strip()
 
         return question, answer
 
